@@ -9,3 +9,8 @@ torch~=2.7.1
 scikit-image~=0.25.2
 filterpy~=1.4.5
 gradio~=5.38.2
+streamlit
+opencv-python-headless
+numpy
+streamlit-webrtc
+av

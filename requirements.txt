@@ -1,9 +1,9 @@
 streamlit
 streamlit-webrtc
-opencv-python-headless
-ultralytics
-numpy
+opencv-python-headless==4.7.0.72
+ultralytics==8.0.204
 cvzone
+numpy
 av
 torch
 

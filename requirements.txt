@@ -1,0 +1,11 @@
+ultralytics~=8.3.170
+opencv-python~=4.12.0.88
+matplotlib~=3.10.3
+streamlit~=1.47.1
+numpy~=2.2.6
+pillow~=11.3.0
+cvzone~=1.6.1
+torch~=2.7.1
+scikit-image~=0.25.2
+filterpy~=1.4.5
+gradio~=5.38.2

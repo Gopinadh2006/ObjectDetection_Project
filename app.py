@@ -15,7 +15,7 @@ RTC_CONFIGURATION = RTCConfiguration(
     {
         "iceServers": [
             {
-                "urls": ["turn:0.tcp.ngrok.io:YOUR_PORT"],  # <-- replace with your ngrok TCP tunnel port
+                "urls": ["turn:0.tcp.in.ngrok.io:19808"],  # <-- replace with your ngrok TCP tunnel port
                 "username": "webrtcuser",
                 "credential": "webrtccredential"
             },
@@ -114,3 +114,4 @@ webrtc_streamer(
     media_stream_constraints={"video": True, "audio": False},
     rtc_configuration=RTC_CONFIGURATION
 )
+

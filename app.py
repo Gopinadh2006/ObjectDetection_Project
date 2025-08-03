@@ -11,20 +11,18 @@ import os
 # =========================
 # TURN/STUN CONFIGURATION
 # =========================
-RTC_CONFIGURATION = RTCConfiguration(
-    {
-        "iceServers": [
-            {
-                "urls": ["turn:0.tcp.in.ngrok.io:19808"],  # <-- replace with your ngrok TCP tunnel port
-                "username": "webrtcuser",
-                "credential": "webrtccredential"
-            },
-            {
-                "urls": ["stun:stun.l.google.com:19302"]
-            }
-        ]
-    }
-)
+RTCConfiguration={
+    "iceServers": [
+        {
+            "urls": ["stun:stun.l.google.com:19302"]
+        },
+        {
+            "urls": ["turn:0.tcp.in.ngrok.io:17515transport=tcp"],
+            "username": "user",
+            "credential": "pass"
+        }
+    ]
+}
 
 # =========================
 # Load YOLOv8 Model
@@ -114,4 +112,5 @@ webrtc_streamer(
     media_stream_constraints={"video": True, "audio": False},
     rtc_configuration=RTC_CONFIGURATION
 )
+
 

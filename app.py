@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, WebRtcMode, RTCConfiguration
+from streamlit_webrtc import webrtc_streamer, VideoTransformerBase, WebRtcMode
 from ultralytics import YOLO
 from sort import Sort
 import cv2
@@ -11,13 +11,11 @@ import os
 # =========================
 # TURN/STUN CONFIGURATION
 # =========================
-RTCConfiguration={
+RTC_CONFIGURATION = {
     "iceServers": [
+        {"urls": ["stun:stun.l.google.com:19302"]},
         {
-            "urls": ["stun:stun.l.google.com:19302"]
-        },
-        {
-            "urls": ["turn:0.tcp.in.ngrok.io:17515transport=tcp"],
+            "urls": ["turn:0.tcp.in.ngrok.io:17515?transport=tcp"],
             "username": "user",
             "credential": "pass"
         }
@@ -112,5 +110,3 @@ webrtc_streamer(
     media_stream_constraints={"video": True, "audio": False},
     rtc_configuration=RTC_CONFIGURATION
 )
-
-
